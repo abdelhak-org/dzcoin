@@ -4,8 +4,10 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
+import {useAuthContext} from "../hooks/useAuthContext"
 function SearchBar() {
+  const {user} = useAuthContext();
+  console.log("user is => ",user)
   return (
     <Container>
       <Navbar expand="lg" className="bg-dark">
@@ -29,6 +31,7 @@ function SearchBar() {
               <NavDropdown.Item href="addpost">Add Announce</NavDropdown.Item>
             </NavDropdown>
           </div>
+      <p style={{color:"white"}}>logedIn as {user?.email} </p>
         </Container>
       </Navbar>
     </Container>

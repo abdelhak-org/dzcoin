@@ -8,7 +8,7 @@ const PostCard = () => {
   return (
     <Accordion defaultActiveKey={['1']} alwaysOpen >
     <Accordion.Item eventKey="0">
-      <Accordion.Header  >Accordion Item #1</Accordion.Header>
+      <Accordion.Header className='custom_style' >Accordion Item #1</Accordion.Header>
       <Accordion.Body className='bg-light'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

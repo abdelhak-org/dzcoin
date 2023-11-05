@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
+import {auth } from "../../firebase.config"
+import { onAuthStateChanged , createUserWithEmailAndPassword } from "firebase/auth";
 const Login = () => {
+
   const [state, setState] = useState({ email: "", password: "" });
-  const submitHandle = (e) => {
+  const [currentUser , seCurrentUser] = useState({})
+
+  const submitHandle = async (e) => {
     e.preventDefault();
+      await createUserWithEmailAndPassword(auth , state.email , state.password)
+     
   };
+
+  useEffect(()=>{
+   onAuthStateChanged(auth,(user)=>{
+    seCurrentUser(user)
+   })
+  },[])
+  console.log("user",currentUser.displayName)
   return (
     <Container 
       className="bg-light p-5 "
