@@ -31,7 +31,7 @@ function AppNavbar() {
             <Nav.Link href="jobs"> Jobs</Nav.Link>
             <NavDropdown title="More" id="basic-nav-dropdown">
               <NavDropdown.Item href="about"> About</NavDropdown.Item>
-              <NavDropdown.Item href="Contact">Contact</NavDropdown.Item>
+              <NavDropdown.Item href="contact">Contact</NavDropdown.Item>
               <NavDropdown.Item href="blog">Blog</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="login">Login</NavDropdown.Item>

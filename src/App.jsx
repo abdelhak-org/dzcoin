@@ -24,7 +24,7 @@ function App() {
       <SearchBar />
       <ControlledCarousel />
       <Routes>
-        <Route exct path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/jobs" element={<JobComponent />} />
         <Route path="/immobilien" element={<ImmobilienComponent />} />
         <Route path="/products" element={<ProductsCompnent />} />
